@@ -1,5 +1,5 @@
 # Task-List
-## Demo: [Tasks](https://dorota87kmiecik.github.io/Task-List/)
+## Demo: [Tasks](https://dorota87kmiecik.github.io/TasksList/)
 
 ## On this page are used the basics 
 - JS
