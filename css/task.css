@@ -66,3 +66,11 @@
     line-height: 20px;
     color: white;
 }
+
+.task__button:hover {
+    background: hsl(0, 100%, 30%);
+}
+
+.task__button:active {
+    background: rosybrown;
+}
