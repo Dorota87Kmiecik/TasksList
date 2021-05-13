@@ -30,6 +30,10 @@
     border-bottom: solid hsl(0, 0%, 70%) 1px;
 }
 
+.task__element--done {
+    text-decoration: line-through;
+}
+
 .task__input {
     box-sizing: border-box;
     justify-self: flex-end;

@@ -1,12 +1,13 @@
 {
-    const tasks = [{
-            content: "jakies zadanie",
-            done: false,
-        },
-        {
-            content: "jakies drugie zadanie",
-            done: true,
-        },
+    const tasks = [
+        // {
+        //     content: "jakies zadanie",
+        //     done: false,
+        // },
+        // {
+        //     content: "jakies drugie zadanie",
+        //     done: true,
+        // },
     ];
 
     const addNewTask = (newTaskContent) => {
@@ -14,6 +15,11 @@
             content: newTaskContent,
         });
         render();
+    };
+
+    const clearNewTaskInput = (newTaskInput) => {
+        newTaskInput.focus();
+        newTaskInput.value = "";
     };
 
     const removeTask = (taskIndex) => {
@@ -31,11 +37,11 @@
 
         for (const work of tasks) {
             htmlString += `
-                <li ${work.done ? "style= \"text-decoration: line-through\"" : ""} class="task__element">
-                <button class="task__input js-done"><i class="fa fa-check" aria-hidden="true"></i></button>
+                <li class="task__element  ${work.done ? "task__element--done" : ""}">
+                <button class="task__input js-done">${work.done ? "<i class=\"fa fa-check\" aria-hidden=\"true\"></i>" : ""}</button>
                 <p class="task__label"> ${work.content} </p>
                 <button class="task__button js-remove"><i class="fa fa-trash-o"></i></button></li>        
-            `;
+          `;
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -62,12 +68,16 @@
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
-        if (newTaskContent === "") {
-            return;
-        }
-        addNewTask(newTaskContent);
 
+        const newTaskInput = document.querySelector(".js-newTask");
+        const newTaskContent = newTaskInput.value.trim();
+
+        if (newTaskContent === "") {
+            newTaskInput.focus();
+        } else {
+            addNewTask(newTaskContent);
+            clearNewTaskInput(newTaskInput);
+        }
     };
 
     const init = () => {
