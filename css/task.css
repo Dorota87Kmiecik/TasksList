@@ -6,11 +6,8 @@
 }
 
 .task__header {
-    flex-basis: 100%;
     border-bottom: solid hsl(0, 0%, 70%) 1px;
-
-    margin: 0px 0 0 0;
-    padding: 15px 20px;
+    margin: 0;
     background: white;
     padding: 10px 20px;
 }
@@ -19,7 +16,6 @@
     flex-basis: 100%;
     list-style: none;
     background: white;
-    padding: 10px;
     margin: 0;
     padding: 10px 20px;
     background: white;
@@ -35,8 +31,6 @@
 }
 
 .task__input {
-    box-sizing: border-box;
-    justify-self: flex-end;
     margin-right: 15px;
     background: green;
     margin-top: 20px;

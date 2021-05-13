@@ -48,7 +48,6 @@
 
         });
 
-
         const toggleDoneButtons = document.querySelectorAll(".js-done");
         toggleDoneButtons.forEach((toggleDoneButtons, taskIndex) => {
             toggleDoneButtons.addEventListener("click", () => {
