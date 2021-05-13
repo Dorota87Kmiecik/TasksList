@@ -31,8 +31,13 @@
     flex-basis: 80%;
     margin: 10px 0;
     padding: 10px;
-
     border: solid hsl(0, 0%, 70%) 1px;
+}
+
+@media(max-width: 767px) {
+    .tasks__input {
+        flex-basis: 100%;
+    }
 }
 
 .tasks__button {
@@ -43,4 +48,10 @@
     background: teal;
     color: white;
 
+}
+
+@media(max-width: 767px) {
+    .tasks__button {
+        flex-basis: 100%;
+    }
 }
