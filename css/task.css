@@ -30,7 +30,7 @@
     border-bottom: solid hsl(0, 0%, 70%) 1px;
 }
 
-.task__element--done {
+.task__label--done {
     text-decoration: line-through;
 }
 

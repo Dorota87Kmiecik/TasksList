@@ -30,10 +30,10 @@
 
         for (const work of tasks) {
             htmlString += `
-                <li class="task__element  ${work.done ? "task__element--done" : ""}">
-                <button class="task__input js-done">${work.done ? "<i class=\"fa fa-check\" aria-hidden=\"true\"></i>" : ""}</button>
-                <p class="task__label"> ${work.content} </p>
-                <button class="task__button js-remove"><i class="fa fa-trash-o"></i></button></li>        
+                <li class="task__element">
+                <button class="task__input js-done">${work.done ? "✔" : ""}</button>
+                <p class="task__label ${work.done ? "task__label--done" : ""}"> ${work.content} </p>
+                <button class="task__button js-remove">🗑</button></li>        
           `;
         }
 
