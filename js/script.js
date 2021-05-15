@@ -56,7 +56,7 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
-        bindEvent()
+        bindEvent();
 
     };
 
