@@ -32,7 +32,6 @@
             removeButtons.addEventListener("click", () => {
                 removeTask(index);
             })
-
         });
 
         const toggleDoneButtons = document.querySelectorAll(".js-done");
@@ -40,11 +39,8 @@
             toggleDoneButtons.addEventListener("click", () => {
                 toggleTaskDone(taskIndex);
             })
-
         });
     };
-
-
 
     const render = () => {
         let htmlString = "";
@@ -52,9 +48,10 @@
         for (const work of tasks) {
             htmlString += `
                 <li class="task__element">
-                <button class="task__input js-done">${work.done ? "✔" : ""}</button>
-                <p class="task__label ${work.done ? "task__label--done" : ""}"> ${work.content} </p>
-                <button class="task__button js-remove">🗑</button></li>        
+                    <button class="task__input js-done">${work.done ? "✔" : ""}</button>
+                    <p class="task__label ${work.done ? "task__label--done" : ""}"> ${work.content} </p>
+                    <button class="task__button js-remove">🗑</button>
+                </li>        
           `;
         }
 
