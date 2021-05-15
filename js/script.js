@@ -25,6 +25,27 @@
         render();
     };
 
+    const bindEvent = () => {
+
+        const removeButtons = document.querySelectorAll(".js-remove");
+        removeButtons.forEach((removeButtons, index) => {
+            removeButtons.addEventListener("click", () => {
+                removeTask(index);
+            })
+
+        });
+
+        const toggleDoneButtons = document.querySelectorAll(".js-done");
+        toggleDoneButtons.forEach((toggleDoneButtons, taskIndex) => {
+            toggleDoneButtons.addEventListener("click", () => {
+                toggleTaskDone(taskIndex);
+            })
+
+        });
+    };
+
+
+
     const render = () => {
         let htmlString = "";
 
@@ -38,23 +59,7 @@
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
-
-        const removeButtons = document.querySelectorAll(".js-remove");
-        removeButtons.forEach((removeButtons, index) => {
-            removeButtons.addEventListener("click", () => {
-                removeTask(index);
-
-            })
-
-        });
-
-        const toggleDoneButtons = document.querySelectorAll(".js-done");
-        toggleDoneButtons.forEach((toggleDoneButtons, taskIndex) => {
-            toggleDoneButtons.addEventListener("click", () => {
-                toggleTaskDone(taskIndex);
-            })
-
-        });
+        bindEvent()
 
     };
 
