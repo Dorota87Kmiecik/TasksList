@@ -57,7 +57,6 @@
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
         bindEvent();
-
     };
 
     const onFormSubmit = (event) => {
