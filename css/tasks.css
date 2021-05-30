@@ -49,6 +49,14 @@
 
 }
 
+.tasks__button:hover {
+    background: hsl(180, 100%, 15%);
+}
+
+.tasks__button:active {
+    background: hsl(180, 100%, 35%);
+}
+
 @media(max-width: 767px) {
     .tasks__button {
         flex-basis: 100%;
