@@ -45,8 +45,9 @@
 
 .task__label {
     flex-basis: 100%;
-    margin-top: 22px;
+    margin: 22px;
     font-size: 12px;
+    word-break: break-word;
 }
 
 .task__button {
